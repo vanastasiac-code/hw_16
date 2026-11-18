@@ -4,6 +4,10 @@ const amount = prompt('What is the quantity of the product?');
 
 const newPrice = Number(price);
 const newAmount = Number(amount);
+console.log(typeof newPrice);
+console.log(Number.isNaN(newPrice));
+console.log(typeof newAmount);
+console.log(Number.isNaN(newAmount));
 
 let summary = newPrice * newAmount;
 console.log(summary);
@@ -19,18 +23,21 @@ console.log(Number.isNaN(summary));
 const city = prompt('What city do you live in?');
 const country = prompt('What country do you live in?');
 
-console.log(city.trim().toLocaleUpperCase());
-console.log(country.trim().toLocaleLowerCase());
+const cityTrim = city.trim();
+const countryTrim = country.trim();
 
-console.log(city.length);
-console.log(country.length);
+console.log(cityTrim.toLocaleUpperCase());
+console.log(countryTrim.toLocaleLowerCase());
 
-console.log(city.includes('a'));
+console.log(cityTrim.length);
+console.log(countryTrim.length);
 
-console.log(city.indexOf('a'));
-console.log(city.lastIndexOf('a'));
+console.log(cityTrim.includes('a'));
 
-const text = `I live in ${city}, ${country}`;
+console.log(cityTrim.indexOf('a'));
+console.log(cityTrim.lastIndexOf('a'));
+
+const text = `I live in ${cityTrim}, ${countryTrim}`;
 console.log(text);
 
 // MATH
@@ -41,6 +48,10 @@ const sum = num1 + num2;
 const sub = num1 - num2;
 const product = num1 * num2;
 const quotient = num1 / num2;
+console.log(sum);
+console.log(sub);
+console.log(product);
+console.log(quotient);
 
 console.log(Math.round(quotient));
 console.log(Math.floor(quotient));
